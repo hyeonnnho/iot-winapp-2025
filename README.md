@@ -208,7 +208,7 @@ IoT 개발자 C#/WinApp 리포지토리 2025
 
 ### C# 문법
 - 기초 문법 : C++, Java와 거의 동일. C++와의 차이점만 비교
-    1. 기본구조 및 주석 : [소스](./day02/Day02Study/SyntaxWinApp01/FrmMain.cs)
+    1. 기본구조 및 주석 : [소스](./day02/Day02Study/ConsoleApp2/Program.cs)
         - 네임스페이스, 클래스, 메서드
         ```cs
         namespace ConsoleApp2
@@ -235,7 +235,7 @@ IoT 개발자 C#/WinApp 리포지토리 2025
         }
         ```
 
-    2. 자료형과 변수, Nullable
+    2. 자료형과 변수, Nullable : [소스](./day02/Day02Study/SyntaxWinApp01/FrmMain.cs)
         - 변수 사용은 C++과 유사
         - 자료형도 C++과 유사, 닷넷타입이 더 추가됨
         - 닷넷타입은 여러 언어에서 공통으로 사용하기 위해서 추가된 기능
@@ -244,10 +244,10 @@ IoT 개발자 C#/WinApp 리포지토리 2025
             - 지역변수만 가능
             - 한번 타입이 지정되면 다른 타입으로 변경 불가
 
-    3. 연산자
+    3. 연산자 : [소스](./day02/Day02Study/SyntaxWinApp02/FrmMain.cs)
         - C, C++과 동일! 패스!!
 
-    4. 분기문, 반복문
+    4. 분기문, 반복문 : [소스](./day02/Day02Study/SyntaxWinApp03/FrmMain.cs)
         - if문
         - switch문
         - for문
@@ -256,9 +256,14 @@ IoT 개발자 C#/WinApp 리포지토리 2025
 
 ## 3일차
 
+### 한글 문제
+- 콘솔 > Program.cs : UTF8 BOM 저장
+- 윈앱 > FrmMain.cs : EUC-KR(CP949) 저장 > 깃허브서 한글이 깨짐
+
 ### C# 문법
 - 기본 문법
-    1. 문자열 처리
+    1. 문자열 처리 : [소스](./day02/Day02Study/SyntaxWinApp04/FrmMain.cs)
+
     2. 클래스와 객체, 메서드
     3. 접근제어자
     4. 상속, 다형성, 추상클래스, 인터페이스
