@@ -401,18 +401,100 @@ IoT 개발자 C#/WinApp 리포지토리 2025
 
 ## 4일차
 
+### 윈앱 컨트롤
+- `NumericUpDown` : 숫자 입력을 도와주는 컨트롤
+    - 보통 Nud~ 로 시작
+    - 나머지는 Button과 동일
+    - Minimum : 입력할 수 있는 최솟값
+    - Maximum : 최댓값
+    - Value : 현재값
+    - 이벤트 생성 거의 안함
+
+- `RichTextBox` : 포맷팅이 가능한 텍스트박스
+    - MS Word, 한글워드프로세서 같은 문장 꾸미기, 페이지 꾸미기가 가능
+    - 보통 Rtb~ 로 시작
+    - ScrollBars : 컨트롤 오른쪽, 하단에 스크롤바 생성
+        - Both 보다는 ForcedBoth, ForcedVertical 사용
+    - WordWrap : 컨트롤 길이를 넘어가면 자동으로 줄바꿈 여부
+
+- `OpenFileDialog` : 읽을 파일과 파일 위치를 선정하고 다이얼로그 창 컨트롤
+    - 폼 위에 표시되지 않는 컨트롤
+    - 보통 DlgOpen 이름으로 사용
+    - 코딩으로 설정내용 작성
+
+- `SaveFileDialog` : 저장 위치에 파일명 지정하는 다이얼로그 창 컨트롤
+    - 보통 DlgSave 이름으로 사용
+    - 코딩으로 설정내용 작성
+
+- `ColorDialog` : 색상을 선태갛는 다이얼로그 컨트롤
+    - 보통 DlgColor 이름으로 사용
+
+- 대부분 컨트롤 속성
+    - Anchor : 현재 컨트롤을 폼의 사이즈가 조정될 때 어디에 고정시키는지 설정
+        - 왼쪽 상단에 있는 컨트롤 : 보통 Left, Top
+        - 오른쪽 하단에 있는 컨트롤 : 보통 Right, Bottom
+    - Dock : 어디로 도킹시키는 지 설정
+        - Top, Left, Right, Bottom, Fill
+        - 보통 컨테이너 컨트롤용으로 사용
+    - Anchor와 Dock 같이 사용해서 디자인
+    - Font : 대표적인 폰트 사용할 것
+        - 폼에서 변경하면 하위 컨트롤은 같이 변경
+
+### VS 개발팁
+- 코드조각(Code Snippet)을 최대한 활용(코딩양 줄임, 오타 예방)
+- 보기 > 개체 브라우저에서 필요한 클래스 검색
+- 소스코드가 회색으로 연하게 변하는 것 > 되도록이면 사용을 피하라는 뜻 > Alt+Enter로 변경 권장사항 확인
+
 ### C# 문법
 - 기본 문법
-    1. 예외처리
-    2. 컬렉션
-    3. 파일 입출력
-    4. 델리게이트, 이벤트
-    5. 람다식
-    6. LINQ
-    7. 비동기
-    8. 속성
-    9. 제네릭
+    1. 형변환 : [소스](./day04/Day04Study/SyntaxWinApp01/FrmMain.cs)
+        - 큰 바이트 데이터형에 작은 바이트 데이터형 값을 할당하면 문제없이 사용가능(묵시적 형변환)
+        - `작은 바이트 데이터형에 큰 바이트 데이터형 값을 할당하면 문법적 오류` -> (명시적 형변환)
+        - 명시적 형변환 : 실행 중 예외발생은 개발자의 책임!!
+        - 값 타입별 .parse(string) : 문자열을 해당 타입으로 변환
+        - .TryParsse() : 추후 진행예쩡
+        - Convert 클래스 사용 추천. 여러 타입을 다 변환가능
+            - Convert.ToInt32()
 
+    2. 예외처리
+        - 실행 중 비상종료를 막기위해서
+        - try ~ catch ~ finally 구문으로 처리
+        - 모든 예외의 부모 클래스는 Exception 클래스
+        - 예외 클래스를 모르겠다 싶으면 Exception으로 처리
+
+        <img src="./image/cs0007.png" width="600">
+
+    3. 컬렉션 : [소스](./day04/Day04Study/SyntaxWinApp02/FrmMain.cs)
+        - 배열, 리스트, 딕셔너리, 큐, 스택 등 여러 데이터를 저장하고 다루는 구조를 가진 객체를 통칭
+
+        - 배열로 콤보박스 데이터 할당
+        - 리스트로 콤보박스 데이터 할당
+        - 딕셔너리로 콤보박스 데이터 할당
+
+        <img src="./image/cs0009.png" width="600">
+
+
+    4. 파일 입출력 : [소스](./day04/Day04Study/SyntaxWinApp03/FrmMain.cs)
+        - 파일 쓰기, 읽기 기능
+        - SaveFileDialog, OpenFileDialog, ColorDialog 컨트롤 사용
+
+        <img src="./image/cs0010.png" width="600">
+
+## 5일차
+
+### C# 문법
+- 기본 문법
+    1. 델리게이트, 이벤트
+    2. 람다식
+    3. LINQ
+    4. 비동기, 스레드
+    5. 속성
+    6. 제네릭
+
+## 6일차
+
+### C# 응용 - WPF
+- WPF 기본
 
 ### C# 문법
 
