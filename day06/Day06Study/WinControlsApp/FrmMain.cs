@@ -185,11 +185,11 @@ namespace WinControlsApp
 
         private void LblUrl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.naver.com");
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
             {
-                FileName == "http's://www.naver.com";
-                Usel
-            }
+                FileName = "https://naver.com",   // 링크 주소
+                UseShellExecute = true
+            });
         }
     }
 }

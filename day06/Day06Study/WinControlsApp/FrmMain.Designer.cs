@@ -67,6 +67,7 @@
             imageList1 = new ImageList(components);
             TrvDummy = new TreeView();
             DlgOpenImage = new OpenFileDialog();
+            toolTip1 = new ToolTip(components);
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -501,5 +502,6 @@
         private ToolStripMenuItem MnuNewpage;
         private ToolStripSeparator toolStripMenuItem1;
         private ToolStripMenuItem MnuExit;
+        private ToolTip toolTip1;
     }
 }
