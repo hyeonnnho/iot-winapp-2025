@@ -609,7 +609,7 @@ IoT 개발자 C#/WinApp 리포지토리 2025
         - where T : new -> 매개변수 없는 생성자 필요
         - where T : BaseClass -> 특정 클래스, 인터페이스 상속 필수
 
-        <img src="./image/cs0012.png" width="600">
+        <img src="./image/cs0012.png" width="400">
 
     6. 비동기, 스레드 : [소스](./day05/Day05Study/SyntaxWinApp03/FrmMain.cs)
         - UI 프로그램에 `응답없음` 발생
